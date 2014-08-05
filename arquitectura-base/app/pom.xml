@@ -1,0 +1,44 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>mx.com.garces.arquitectura</groupId>
+		<artifactId>base</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</parent>
+	<groupId>mx.com.garces.arquitectura-base</groupId>
+	<artifactId>${app_name}-${app_sufix}</artifactId>
+	<packaging>ear</packaging>
+	<name>${app_name} - ${app_sufix}</name>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>mx.com.garces.arquitectura-base</groupId>
+			<artifactId>${app_name}-${ejb_sufix}</artifactId>
+			<version>${project.parent.version}</version>
+			<type>ejb</type>
+		</dependency>
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-ear-plugin</artifactId>
+				<configuration>
+					<applicationName>${app_name}-${ejb_sufix}</applicationName>
+					<filtering>true</filtering>
+					<earSourceDirectory>${basedir}/src/main/application</earSourceDirectory>
+					<defaultLibBundleDir>/APP-INF/lib</defaultLibBundleDir>
+					<generateApplicationXml>false</generateApplicationXml>
+					<earSourceIncludes>**</earSourceIncludes>
+					<modules>
+						<ejbModule>
+							<groupId>mx.com.garces.arquitectura-base</groupId>
+							<artifactId>${app_name}-${ejb_sufix}</artifactId>
+						</ejbModule>
+					</modules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
