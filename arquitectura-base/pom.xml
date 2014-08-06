@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>mx.com.garces.arquitectura</groupId>
-	<artifactId>base</artifactId>
+	<artifactId>arquitectura-base</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>${app_name} - ${project.packaging}</name>
@@ -41,11 +41,15 @@
 	<modules>
 		<module>app</module>
 		<module>ejb</module>
+		<module>services</module>
+		<module>dao</module>
 	</modules>
 	<properties>
 		<app_name>arquitectura-base</app_name>
 		<app_sufix>APP</app_sufix>
 		<ejb_sufix>EJB</ejb_sufix>
+		<service_sufix>SERVICES</service_sufix>
+		<dao_sufix>DAO</dao_sufix>
 		<web_sufix>WAR</web_sufix>
 	</properties>
 </project>

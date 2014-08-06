@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>mx.com.garces.arquitectura</groupId>
-		<artifactId>arquitectura-base</artifactId>
+		<artifactId>arquitectura-lib</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<groupId>mx.com.garces.arquitectura-base</groupId>
+	<groupId>mx.com.garces.arquitectura-lib</groupId>
 	<artifactId>${app_name}-${ejb_sufix}</artifactId>
 	<packaging>jar</packaging>
 	<name>${app_name} - ${ejb_sufix}</name>
