@@ -1,4 +1,4 @@
-package mx.com.garces.ejb;
+package mx.com.garces.base.ejb;
 
 import javax.ejb.Stateless;
 
@@ -6,17 +6,23 @@ import javax.ejb.Stateless;
  * Session Bean implementation class testEJB
  */
 @Stateless(mappedName = "testEJB")
-public class testEJB implements testEJBLocal {
+
+public class testEJB extends BaseEJB implements testEJBLocal {
 
     /**
+	 * 
+	 */
+	private static final long serialVersionUID = -2645247985144143492L;
+
+	/**
      * Default constructor. 
      */
     public testEJB() {
-        // TODO Auto-generated constructor stub
+        logger.fine("creando ejb");
     }
 
 	public void echo(String s) throws Exception {
-		// TODO Auto-generated method stub
+		logger.severe("sever message");
 		
 	}
 

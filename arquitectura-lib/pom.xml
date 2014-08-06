@@ -170,6 +170,7 @@
 		<ejb_sufix>EJB</ejb_sufix>
 		<dao_sufix>DAO</dao_sufix>
 		<service_sufix>SERVICES</service_sufix>
+		<ws_sufix>WS</ws_sufix>
 		<aruitectura_version>0.0.1</aruitectura_version>
 		<wls_version>10.3.6</wls_version>
 		<specification-version>0.0.1</specification-version>
@@ -181,5 +182,6 @@
 		<module>ejb</module>
 		<module>dao</module>
 		<module>services</module>
+		<module>ws</module>
 	</modules>
 </project>
