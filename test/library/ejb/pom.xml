@@ -18,6 +18,11 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>${arquitectura_lib_group}.${arquitectura_lib_name}</groupId>
+			<artifactId>${arquitectura_lib_name}-${ejb_sufix}</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
 			<groupId>com.oracle.weblogic</groupId>
 			<artifactId>wlfullclient</artifactId>
 			<scope>provided</scope>
