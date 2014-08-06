@@ -4,9 +4,9 @@
 	<parent>
 		<groupId>mx.com.garces.arquitectura</groupId>
 		<artifactId>arquitectura-lib</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 	</parent>
-	<groupId>mx.com.garces.arquitectura-lib</groupId>
+	<groupId>mx.com.garces.arquitectura.arquitectura-lib</groupId>
 	<artifactId>${app_name}-${ejb_sufix}</artifactId>
 	<packaging>jar</packaging>
 	<name>${app_name} - ${ejb_sufix}</name>

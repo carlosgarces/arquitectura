@@ -4,21 +4,21 @@
 	<parent>
 		<groupId>mx.com.garces.arquitectura</groupId>
 		<artifactId>arquitectura-lib</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 	</parent>
-	<groupId>mx.com.garces.arquitectura-lib</groupId>
+	<groupId>mx.com.garces.arquitectura.arquitectura-lib</groupId>
 	<artifactId>${app_name}-${app_sufix}</artifactId>
 	<packaging>ear</packaging>
 	<name>${app_name} - ${app_sufix}</name>
 
 
-	<!-- <dependencies> <dependency> <groupId>mx.com.garces.arquitectura-base</groupId> 
+	<!-- <dependencies> <dependency> <groupId>mx.com.garces.arquitectura-lib</groupId> 
 		<artifactId>${app_name}-${ejb_sufix}</artifactId> <version>${project.parent.version}</version> 
 		<type>ejb</type> </dependency> </dependencies> -->
 
 	<dependencies>
 		<dependency>
-			<groupId>mx.com.garces.arquitectura-lib</groupId>
+			<groupId>mx.com.garces.arquitectura.arquitectura-lib</groupId>
 			<artifactId>${app_name}-${ejb_sufix}</artifactId>
 			<version>${project.parent.version}</version>
 			<type>ejb</type>
@@ -145,6 +145,25 @@
 			<version>${org.springframework.version}</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<scope>compile</scope>
+			</dependency>
+		
 	</dependencies>
 
 	<build>
@@ -154,13 +173,12 @@
 				<configuration>
 					<applicationName>${app_name}-${ejb_sufix}</applicationName>
 					<filtering>true</filtering>
-					<earSourceDirectory>${basedir}/src/main/application</earSourceDirectory>
 					<defaultLibBundleDir>/APP-INF/lib</defaultLibBundleDir>
 					<generateApplicationXml>false</generateApplicationXml>
 					<earSourceIncludes>**</earSourceIncludes>
 					<modules>
 						<ejbModule>
-							<groupId>mx.com.garces.arquitectura-lib</groupId>
+							<groupId>mx.com.garces.arquitectura.arquitectura-lib</groupId>
 							<artifactId>${app_name}-${ejb_sufix}</artifactId>
 						</ejbModule>
 					</modules>

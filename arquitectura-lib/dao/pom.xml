@@ -2,10 +2,11 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>mx.com.garces.arquitectura</groupId>
-    <artifactId>arquitectura-base</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>arquitectura-lib</artifactId>
+    <version>0.0.1</version>
   </parent>
-  <groupId>mx.com.garces.arquitectura.base</groupId>
-  <artifactId>dao</artifactId>
+  <groupId>mx.com.garces.arquitectura.arquitectura-lib</groupId>
+  <artifactId>${app_name}-${dao_sufix}</artifactId>
+  <packaging>jar</packaging>
   <name>${app_name} - ${dao_sufix}</name>
 </project>

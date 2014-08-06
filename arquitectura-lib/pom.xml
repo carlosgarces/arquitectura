@@ -3,13 +3,14 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>mx.com.garces.arquitectura</groupId>
 	<artifactId>arquitectura-lib</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>pom</packaging>
 
 	
 
 	<dependencyManagement>
 		<dependencies>
+		<!-- Spring dependencies -->
 			<!-- Core utilities used by other modules. Define this if you use Spring 
 				Utility APIs (org.springframework.core.*/org.springframework.util.*) -->
 			<dependency>
@@ -131,10 +132,34 @@
 				<version>${org.springframework.version}</version>
 				<scope>test</scope>
 			</dependency>
+			
+			<!-- Hibernate dependencies -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>3.3.1.GA</version>
+			</dependency>
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>5.1.6</version>
+			</dependency>
+			<dependency>
+				<groupId>org.slf4j</groupId>
+				<artifactId>slf4j-log4j12</artifactId>
+				<version>1.5.2</version>
+			</dependency>
+			<dependency>
+				<groupId>javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>3.4.GA</version>
+				<scope>compile</scope>
+			</dependency>
+			<!-- WLS dependencies -->
 			<dependency>
 				<groupId>com.oracle.weblogic</groupId>
 				<artifactId>wlfullclient</artifactId>
-				<version>10.3.6</version>
+				<version>${wls_version}</version>
 				<scope>provided</scope>
 			</dependency>
 		</dependencies>
@@ -143,6 +168,10 @@
 		<app_name>arquitectura-lib</app_name>
 		<app_sufix>APP</app_sufix>
 		<ejb_sufix>EJB</ejb_sufix>
+		<dao_sufix>DAO</dao_sufix>
+		<service_sufix>SERVICES</service_sufix>
+		<aruitectura_version>0.0.1</aruitectura_version>
+		<wls_version>10.3.6</wls_version>
 		<specification-version>0.0.1</specification-version>
 		<implementation-version>0.0.1.1</implementation-version>
 		<org.springframework.version>4.0.6.RELEASE</org.springframework.version>
@@ -150,5 +179,7 @@
 	<modules>
 		<module>app</module>
 		<module>ejb</module>
+		<module>dao</module>
+		<module>services</module>
 	</modules>
 </project>
