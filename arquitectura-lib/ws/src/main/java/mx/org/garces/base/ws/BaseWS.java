@@ -1,4 +1,4 @@
-package ws;
+package mx.org.garces.base.ws;
 
 import java.io.Serializable;
 import java.util.logging.Logger;
