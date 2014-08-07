@@ -1,4 +1,4 @@
-package mx.com.garces.base.service;
+package mx.org.garces.base.service;
 
 import java.io.Serializable;
 import java.util.logging.Logger;

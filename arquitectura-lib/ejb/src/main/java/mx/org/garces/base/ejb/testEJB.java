@@ -1,4 +1,4 @@
-package mx.com.garces.base.ejb;
+package mx.org.garces.base.ejb;
 
 import javax.ejb.Stateless;
 

@@ -1,8 +1,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>${groupID_name}</groupId>
-	<artifactId>${app_name}</artifactId>
+	<groupId>mx.org.garces.arquitectura</groupId>
+	<artifactId>arquitectura-lib</artifactId>
 	<version>0.0.1</version>
 	<packaging>pom</packaging>
 
@@ -33,8 +33,6 @@
 				<version>${org.springframework.version}</version>
 			</dependency>
 
-			<!-- Aspect Oriented Programming (AOP) Framework (depends on spring-core, 
-				spring-beans) Define this if you use Spring AOP APIs (org.springframework.aop.*) -->
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-aop</artifactId>
@@ -128,7 +126,13 @@
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
 				<version>${org.springframework.version}</version>
-				<scope>test</scope>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.11</version>
+				<scope>provided</scope>
 			</dependency>
 
 			<!-- Hibernate dependencies -->
@@ -163,20 +167,24 @@
 		</dependencies>
 	</dependencyManagement>
 	<properties>
-		<app_name>arquitectura-lib</app_name>
+		<arq_app_name>arquitectura-lib</arq_app_name>
+		<arquitectura_version>0.0.1</arquitectura_version>
+		<arq_groupID_name>mx.org.garces.arquitectura</arq_groupID_name>
+
 		<app_sufix>APP</app_sufix>
 		<ejb_sufix>EJB</ejb_sufix>
 		<dao_sufix>DAO</dao_sufix>
 		<service_sufix>SERVICES</service_sufix>
 		<ws_sufix>WS</ws_sufix>
-		<arquitectura_version>0.0.1</arquitectura_version>
-		<groupID_name>mx.com.garces.arquitectura</groupID_name>
-		
+		<transaction_sufix>JTA</transaction_sufix>
+		<persistence_sufix>JPA</persistence_sufix>
+		<spring_sufix>SPRING</spring_sufix>
+		<test_sufix>TEST</test_sufix>
 
 		<wls_version>10.3.6</wls_version>
 		<specification-version>0.0.1</specification-version>
 		<implementation-version>0.0.1.1</implementation-version>
-		<org.springframework.version>4.0.6.RELEASE</org.springframework.version>
+		<org.springframework.version>3.0.5.RELEASE</org.springframework.version>
 	</properties>
 	<modules>
 		<module>dao</module>
@@ -184,5 +192,9 @@
 		<module>ejb</module>
 		<module>app</module>
 		<module>ws</module>
+		<module>transaction</module>
+		<module>persistence</module>
+		<module>spring</module>
+		<module>test</module>
 	</modules>
 </project>

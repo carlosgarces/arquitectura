@@ -1,4 +1,4 @@
-package mx.com.garces.base.service;
+package mx.org.garces.base.service;
 
 
 public class BaseTransactionalService extends BaseService{

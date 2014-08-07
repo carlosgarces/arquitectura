@@ -2,19 +2,19 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>${groupID_name}</groupId>
-		<artifactId>${app_name}</artifactId>
+		<groupId>mx.org.garces.arquitectura</groupId>
+		<artifactId>arquitectura-lib</artifactId>
 		<version>0.0.1</version>
 	</parent>
-	<groupId>${groupID_name}.${app_name}</groupId>
-	<artifactId>${app_name}-${ejb_sufix}</artifactId>
+	<groupId>${arq_groupID_name}.${arq_app_name}</groupId>
+	<artifactId>${arq_app_name}-${ejb_sufix}</artifactId>
 	<packaging>jar</packaging>
-	<name>${app_name} - ${ejb_sufix}</name>
+	<name>${arq_app_name} - ${ejb_sufix}</name>
 
 	<dependencies>
 		<dependency>
-			<groupId>${groupID_name}.${app_name}</groupId>
-			<artifactId>${app_name}-${service_sufix}</artifactId>
+			<groupId>${arq_groupID_name}.${arq_app_name}</groupId>
+			<artifactId>${arq_app_name}-${service_sufix}</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
@@ -22,6 +22,16 @@
 			<artifactId>wlfullclient</artifactId>
 			<scope>provided</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -29,7 +39,7 @@
 			<plugin>
 				<artifactId>maven-jar-plugin</artifactId>
 				<configuration>
-					<filename>${app_name}-${ejb_sufix}.jar</filename>
+					<filename>${arq_app_name}-${ejb_sufix}.jar</filename>
 				</configuration>
 			</plugin>
 		</plugins>
