@@ -11,11 +11,37 @@
 	<packaging>jar</packaging>
 	<name>${app_name} - ${service_sufix}</name>
 
+
 	<dependencies>
 		<dependency>
 			<groupId>${groupID_name}.${app_name}</groupId>
 			<artifactId>${app_name}-${dao_sufix}</artifactId>
 			<version>${project.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${arq_groupID_name}.${arq_app_name}</groupId>
+			<artifactId>${arq_app_name}-${service_sufix}</artifactId>
+			<version>${arquitectura_version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>${arq_groupID_name}.${arq_app_name}</groupId>
+			<artifactId>${arq_app_name}-${test_sufix}</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
 		</dependency>
 	</dependencies>
 </project>

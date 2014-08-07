@@ -1,8 +1,12 @@
-package mx.com.garces.test.ejb;
+package mx.org.garces.test.ejb;
 
 import javax.ejb.Stateless;
 
-import mx.com.garces.base.ejb.BaseTransactionEJB;
+import mx.org.garces.base.ejb.BaseTransactionEJB;
+import mx.org.garces.base.service.TestService;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
 /**
  * Session Bean implementation class MyEJB
@@ -10,6 +14,10 @@ import mx.com.garces.base.ejb.BaseTransactionEJB;
 @Stateless(mappedName = "myEJB")
 public class MyEJB extends BaseTransactionEJB implements MyEJBRemote {
 
+	
+	@Autowired
+	@Qualifier("testService")
+	TestService testService;
     /**
 	 * 
 	 */
@@ -19,11 +27,11 @@ public class MyEJB extends BaseTransactionEJB implements MyEJBRemote {
      * Default constructor. 
      */
     public MyEJB() {
-        // TODO Auto-generated constructor stub
+        
     }
 
 	public void echo() {
-		// TODO Auto-generated method stub
+		testService.echo();
 		
 	}
 

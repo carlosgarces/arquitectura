@@ -9,7 +9,7 @@
 		<wls:param-value>UTF-8</wls:param-value>
 	</wls:application-param>
 	<wls:library-ref>
-		<wls:library-name>${arquitectura_lib_name}</wls:library-name>
+		<wls:library-name>${arq_app_name}</wls:library-name>
 		<wls:specification-version>${specification-version}</wls:specification-version>
 		<wls:implementation-version>${implementation-version}</wls:implementation-version>
 	</wls:library-ref>

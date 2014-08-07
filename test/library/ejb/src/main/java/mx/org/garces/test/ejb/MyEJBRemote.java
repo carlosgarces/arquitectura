@@ -1,4 +1,4 @@
-package mx.com.garces.test.ejb;
+package mx.org.garces.test.ejb;
 
 import javax.ejb.Remote;
 

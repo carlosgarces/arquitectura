@@ -36,6 +36,7 @@
 				<scope>provided</scope>
 			</dependency>
 
+
 			<!-- Aspect Oriented Programming (AOP) Framework (depends on spring-core, 
 				spring-beans) Define this if you use Spring AOP APIs (org.springframework.aop.*) -->
 			<dependency>
@@ -179,30 +180,54 @@
 
 			<!-- arquitectrura -->
 			<dependency>
-				<groupId>${arquitectura_lib_group}.${arquitectura_lib_name}</groupId>
-				<artifactId>${arquitectura_lib_name}-${ejb_sufix}</artifactId>
+				<groupId>${arq_groupID_name}.${arq_app_name}</groupId>
+				<artifactId>${arq_app_name}-${ejb_sufix}</artifactId>
 				<version>${arquitectura_version}</version>
-				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>${arq_groupID_name}.${arq_app_name}</groupId>
+				<artifactId>${arq_app_name}-${service_sufix}</artifactId>
+				<version>${arquitectura_version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${arq_groupID_name}.${arq_app_name}</groupId>
+				<artifactId>${arq_app_name}-${dao_sufix}</artifactId>
+				<version>${arquitectura_version}</version>
+			</dependency>
+			<dependency>
+				<groupId>${arq_groupID_name}.${arq_app_name}</groupId>
+				<artifactId>${arq_app_name}-${test_sufix}</artifactId>
+				<version>${arquitectura_version}</version>
+			</dependency>
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>4.11</version>
+				<scope>test</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	<properties>
-		<groupID_name>mx.com.garces.test</groupID_name>
+
+		<arq_app_name>arquitectura-lib</arq_app_name>
+		<arquitectura_version>0.0.1</arquitectura_version>
+		<arq_groupID_name>mx.org.garces.arquitectura</arq_groupID_name>
+
+
+		<groupID_name>mx.org.garces.test</groupID_name>
 		<app_name>library</app_name>
 		<app_sufix>APP</app_sufix>
 		<ejb_sufix>EJB</ejb_sufix>
 		<dao_sufix>DAO</dao_sufix>
 		<service_sufix>SERVICES</service_sufix>
 		<ws_sufix>WS</ws_sufix>
-		<arquitectura_version>0.0.1</arquitectura_version>
-		<arquitectura_lib_name>arquitectura-lib</arquitectura_lib_name>
-		<arquitectura_lib_group>mx.com.garces.arquitectura</arquitectura_lib_group>
-
-
+		<transaction_sufix>JTA</transaction_sufix>
+		<spring_sufix>SPRING</spring_sufix>
+		<test_sufix>TEST</test_sufix>
 		<wls_version>10.3.6</wls_version>
 		<specification-version>0.0.1</specification-version>
 		<implementation-version>0.0.1.1</implementation-version>
-		<org.springframework.version>4.0.6.RELEASE</org.springframework.version>
+		<org.springframework.version>3.0.5.RELEASE</org.springframework.version>
 	</properties>
 	<modules>
 		<module>dao</module>
