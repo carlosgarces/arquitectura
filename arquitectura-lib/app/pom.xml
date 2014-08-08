@@ -2,24 +2,24 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<groupId>${groupID_name}</groupId>
-		<artifactId>${app_name}</artifactId>
-		<version>0.0.1</version>
+<groupId>mx.org.garces.arquitectura</groupId>
+	<artifactId>arquitectura-lib</artifactId>
+	<version>0.0.1</version>
 	</parent>
-	<groupId>${groupID_name}.${app_name}</groupId>
-	<artifactId>${app_name}-${app_sufix}</artifactId>
+	<groupId>${arq_groupID_name}.${arq_app_name}</groupId>
+	<artifactId>${arq_app_name}-${app_sufix}</artifactId>
 	<packaging>ear</packaging>
-	<name>${app_name} - ${app_sufix}</name>
+	<name>${arq_app_name} - ${app_sufix}</name>
 
 
-	<!-- <dependencies> <dependency> <groupId>mx.com.garces.arquitectura-lib</groupId> 
-		<artifactId>${app_name}-${ejb_sufix}</artifactId> <version>${project.parent.version}</version> 
+	<!-- <dependencies> <dependency> <groupId>mx.org.garces.arquitectura-lib</groupId> 
+		<artifactId>${arq_app_name}-${ejb_sufix}</artifactId> <version>${project.parent.version}</version> 
 		<type>ejb</type> </dependency> </dependencies> -->
 
 	<dependencies>
 		<dependency>
-			<groupId>${groupID_name}.${app_name}</groupId>
-			<artifactId>${app_name}-${ejb_sufix}</artifactId>
+			<groupId>${arq_groupID_name}.${arq_app_name}</groupId>
+			<artifactId>${arq_app_name}-${ejb_sufix}</artifactId>
 			<version>${project.version}</version>
 			<type>ejb</type>
 		</dependency>
@@ -171,15 +171,15 @@
 			<plugin>
 				<artifactId>maven-ear-plugin</artifactId>
 				<configuration>
-					<applicationName>${app_name}-${ejb_sufix}</applicationName>
+					<applicationName>${arq_app_name}-${ejb_sufix}</applicationName>
 					<filtering>true</filtering>
 					<defaultLibBundleDir>/APP-INF/lib</defaultLibBundleDir>
 					<generateApplicationXml>false</generateApplicationXml>
 					<earSourceIncludes>**</earSourceIncludes>
 					<modules>
 						<ejbModule>
-							<groupId>${groupID_name}.${app_name}</groupId>
-							<artifactId>${app_name}-${ejb_sufix}</artifactId>
+							<groupId>${arq_groupID_name}.${arq_app_name}</groupId>
+							<artifactId>${arq_app_name}-${ejb_sufix}</artifactId>
 						</ejbModule>
 					</modules>
 				</configuration>
