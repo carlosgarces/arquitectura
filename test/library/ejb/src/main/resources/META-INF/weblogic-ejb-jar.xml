@@ -4,5 +4,7 @@
     <wls:weblogic-enterprise-bean>
         <wls:ejb-name>myEJB</wls:ejb-name>
         <wls:enable-call-by-reference>true</wls:enable-call-by-reference>
+        
     </wls:weblogic-enterprise-bean>
+
 </wls:weblogic-ejb-jar>
