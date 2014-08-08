@@ -18,11 +18,6 @@
 			<artifactId>${arq_app_name}-${service_sufix}</artifactId>
 			<version>${project.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>com.oracle.weblogic</groupId>
-			<artifactId>wlfullclient</artifactId>
-			<scope>provided</scope>
-		</dependency>
 	</dependencies>
 
 </project>

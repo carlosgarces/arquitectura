@@ -16,6 +16,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 //@ContextConfiguration(locations={"classpath*:applicationContext.xml"})
 public class Testejb extends BaseTest {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -4616414214722360220L;
+
 	@Autowired
 	MyEJBRemote myEjbMock;
 

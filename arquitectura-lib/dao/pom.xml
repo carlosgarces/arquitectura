@@ -12,10 +12,11 @@
 	<name>${arq_app_name} - ${dao_sufix}</name>
 
 	<dependencies>
+		<!-- <dependency> <groupId>com.oracle.weblogic</groupId> <artifactId>wlfullclient</artifactId> 
+			<scope>provided</scope> </dependency> -->
 		<dependency>
-			<groupId>com.oracle.weblogic</groupId>
-			<artifactId>wlfullclient</artifactId>
-			<scope>provided</scope>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>

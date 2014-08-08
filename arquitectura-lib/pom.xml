@@ -139,7 +139,47 @@
 			<dependency>
 				<groupId>org.hibernate</groupId>
 				<artifactId>hibernate-core</artifactId>
-				<version>3.3.1.GA</version>
+				<version>${hibernate_version}</version>
+			</dependency>
+
+			<!-- for JPA, use hibernate-entitymanager instead of hibernate-core -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>${hibernate_version}</version>
+			</dependency>
+
+			<!-- optional -->
+
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-osgi</artifactId>
+				<version>${hibernate_version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-envers</artifactId>
+				<version>${hibernate_version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-c3p0</artifactId>
+				<version>${hibernate_version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-proxool</artifactId>
+				<version>${hibernate_version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-infinispan</artifactId>
+				<version>${hibernate_version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-ehcache</artifactId>
+				<version>${hibernate_version}</version>
 			</dependency>
 			<dependency>
 				<groupId>mysql</groupId>
@@ -162,6 +202,12 @@
 				<version>3.4.GA</version>
 				<scope>compile</scope>
 			</dependency>
+			<dependency>
+				<groupId>javax.ejb</groupId>
+				<artifactId>ejb-api</artifactId>
+				<version>${ejb_api_vesion}</version>
+			</dependency>
+
 			<!-- WLS dependencies -->
 			<dependency>
 				<groupId>com.oracle.weblogic</groupId>
@@ -186,10 +232,14 @@
 		<spring_sufix>SPRING</spring_sufix>
 		<test_sufix>TEST</test_sufix>
 
+
+		<ejb_api_vesion>3.0</ejb_api_vesion>
+		<hibernate_version>4.3.6.Final</hibernate_version>
 		<wls_version>10.3.6</wls_version>
 		<specification-version>0.0.1</specification-version>
 		<implementation-version>0.0.1.1</implementation-version>
-		<org.springframework.version>3.0.5.RELEASE</org.springframework.version>
+		<org.springframework.version>3.0.5.RELEASE
+		</org.springframework.version>
 	</properties>
 	<modules>
 		<module>dao</module>

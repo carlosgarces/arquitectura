@@ -18,11 +18,12 @@
 			<version>${project.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>com.oracle.weblogic</groupId>
-			<artifactId>wlfullclient</artifactId>
-			<scope>provided</scope>
+			<groupId>javax.ejb</groupId>
+			<artifactId>ejb-api</artifactId>
+			<version>${ejb_api_vesion}</version>
 		</dependency>
-
+		<!-- <dependency> <groupId>com.oracle.weblogic</groupId> <artifactId>wlfullclient</artifactId> 
+			<scope>provided</scope> </dependency> -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
