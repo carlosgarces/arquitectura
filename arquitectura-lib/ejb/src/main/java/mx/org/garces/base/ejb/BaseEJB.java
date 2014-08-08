@@ -1,16 +1,11 @@
 package mx.org.garces.base.ejb;
 
 import java.io.Serializable;
-import java.util.logging.Logger;
 
-import javax.ejb.CreateException;
-import javax.interceptor.Interceptors;
-
-import org.springframework.ejb.interceptor.SpringBeanAutowiringInterceptor;
-import org.springframework.ejb.support.AbstractStatelessSessionBean;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
-@Interceptors(SpringBeanAutowiringInterceptor.class)
 public class BaseEJB  implements Serializable {
 
 
@@ -19,8 +14,7 @@ public class BaseEJB  implements Serializable {
 	 */
 	private static final long serialVersionUID = 4082138409364487719L;
 
-	public final static Logger logger = Logger.getLogger("EJB.log");
-	
+	public final static Logger logger = LoggerFactory.getLogger("DAO.log");	
 	public BaseEJB() {
 		
 	}

@@ -18,11 +18,11 @@ public class testEJB extends BaseEJB implements testEJBLocal {
      * Default constructor. 
      */
     public testEJB() {
-        logger.fine("creando ejb");
+        logger.debug("creando ejb");
     }
 
 	public void echo(String s) throws Exception {
-		logger.severe("sever message");
+		logger.debug("sever message");
 		
 	}
 
